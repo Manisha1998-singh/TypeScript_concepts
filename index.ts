@@ -1,22 +1,26 @@
-function addTwo(num: number) {
+function addTwo(num: number): number {
   // num.toUpperCase(); //not allow
   return num + 2;
+  //return "hello";
 }
 
-function getUpper(val: string) {
-  return val.toUpperCase();
-}
+// function getValue(val: number): string {
+//   if (val > 5) {
+//     return true; //error
+//   }
+//   return "200 Ok";
+// }
 
-function signUpUser(name: string, email: string, isPaid: boolean) {}
-signUpUser("shilpi", "shilpi@gmail.com", true);
+const getHello = (s: string): string => {
+  return "";
+};
 
-//Arrow function  //default value
-let loginUser = (name: string, email: string, isPaid: boolean = false) => {};
+const heros = ["thor", "Spiderman", "isronman"];
+//const heros = [1, 3, 6];
 
-loginUser("Mani", "shilpi@gmail.com"); //added default value thats why not added here
-addTwo(4);
-//getUpper(5); //error
+heros.map((hero): string => {
+  return `hero is ${hero}`;
+  //return 1;
+});
 
-export {};
-console.log("mannu");
-console.log(getUpper("mani"));
+console.log("mottuu");
