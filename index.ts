@@ -12,4 +12,13 @@ UserId.toFixed();
 // boolean
 let isLogin: boolean = false;
 
-//
+//  any
+
+let hero: string;
+function getHero() {
+  return "thor";
+}
+//hero: any; // not check the type
+hero = getHero();
+
+export {};
