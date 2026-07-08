@@ -1,14 +1,11 @@
-const User = {
-  name: "MAnisha",
-  email: "mani@gamil.com",
-  isActive: true,
+type User = {
+  name: string;
+  email: string;
+  isActive: boolean;
 };
-function createUser({ name, isPaid }: { name: string; isPaid: boolean }) {}
-let newUser = { name: "tushar", isPaid: false, email: "m@h.com" };
-createUser(newUser);
-createUser({ name: "MAnisha", isPaid: false });
-function cerateCourse(): { name: string; price: number } {
-  return { name: "tushar", price: 3 };
-}
 
+function createUser(user: User) {
+  return { name: "", email: "", isActive: true };
+}
+createUser({ name: "", email: "", isActive: true });
 export {};
