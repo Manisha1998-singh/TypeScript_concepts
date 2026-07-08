@@ -4,7 +4,7 @@ function consoleError(errmsg: string): void {
   //return 1;
 }
 
-function handleError(errmsg: string): void {
+function handleError(errmsg: string): never {
   throw new Error(errmsg);
 }
 
