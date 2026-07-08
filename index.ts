@@ -1,24 +1,22 @@
-let message: string = "Hello TypeScript";
-console.log(message);
-//message = 10; // provide safety
-console.log(message);
-
-//Number
-let UserId = 3336.7;
-//UserId= "mannu" auto show error
-
-UserId.toFixed();
-
-// boolean
-let isLogin: boolean = false;
-
-//  any
-
-let hero: string;
-function getHero() {
-  return "thor";
+function addTwo(num: number) {
+  // num.toUpperCase(); //not allow
+  return num + 2;
 }
-//hero: any; // not check the type
-hero = getHero();
+
+function getUpper(val: string) {
+  return val.toUpperCase();
+}
+
+function signUpUser(name: string, email: string, isPaid: boolean) {}
+signUpUser("shilpi", "shilpi@gmail.com", true);
+
+//Arrow function  //default value
+let loginUser = (name: string, email: string, isPaid: boolean = false) => {};
+
+loginUser("Mani", "shilpi@gmail.com"); //added default value thats why not added here
+addTwo(4);
+//getUpper(5); //error
 
 export {};
+console.log("mannu");
+console.log(getUpper("mani"));
