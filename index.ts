@@ -24,3 +24,14 @@ interface Bootle {
 }
 identityFive<Bootle>({ brand: "Tum", types: 5 });
 console.log(identityFive(5));
+
+function getSearchProduct<T>(products: T[]): T {
+  //do some database operations
+  const myIndex = 3;
+  return products[myIndex]!;
+}
+getSearchProduct([5]);
+const getMoreSearchProduct = <T>(products: T[]): T => {
+  const myIndex = 5;
+  return products[myIndex]!;
+};
