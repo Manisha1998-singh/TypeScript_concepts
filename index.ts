@@ -1,6 +1,6 @@
 //Getters and setters
 class User {
-  private _courseCount = 1;
+  protected _courseCount = 1;
   readonly city: string = "jaipur";
   constructor(
     public email: string,
@@ -26,5 +26,11 @@ class User {
   }
 }
 
+class SubUser extends User {
+  isFamily: boolean = true;
+  changeCourseCount() {
+    this._courseCount = 4;
+  }
+}
 const manisha = new User("h@h.com", "mannu");
 //manisha.city = "jaipur"; // error it readonly
