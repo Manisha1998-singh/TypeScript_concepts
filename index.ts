@@ -1,17 +1,22 @@
 //Narrowing
 
-function detectType(val: number | string) {
-  // return val.toLowerCase();
-  if (typeof val === "string") {
-    return val.toLocaleLowerCase();
-  }
-  return val + 3;
+interface User {
+  name: string;
+  email: string;
 }
-
-function provildId(id: string | null) {
-  if (!id) {
-    console.log("Please provide ID");
-    return;
-  }
-  id.toLocaleLowerCase();
+interface Admin {
+  name: string;
+  email: string;
+  isAdmin: boolean;
 }
+function isAdminAccount(account: User | Admin) {
+  if ("isAdmin" in account) {
+    return account.isAdmin;
+  }
+}
+const newUser: Admin = {
+  name: "Manisha",
+  email: "manisha@gmail.com",
+  isAdmin: true,
+};
+console.log(isAdminAccount(newUser));
